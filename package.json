@@ -1,0 +1,19 @@
+{
+  "name": "social-media",
+  "version": "1.0.0",
+  "description": "social media app",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Social media"
+  },
+  "keywords": [
+    "Social",
+    "Media"
+  ],
+  "author": "Md Sohail",
+  "license": "ISC"
+}
