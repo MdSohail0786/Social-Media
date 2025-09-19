@@ -4,6 +4,29 @@
 .rightbarWrapper {
   padding: 20px 20px 0 0;
 }
+
+/* Mobile - hide rightbar by default */
+@media (max-width: 767px) {
+  .rightbar {
+    display: none;
+  }
+}
+
+/* Tablet and up - show rightbar */
+@media (min-width: 768px) {
+  .rightbar {
+    display: block;
+    max-width: 350px;
+    min-width: 300px;
+  }
+}
+
+/* Desktop - full rightbar */
+@media (min-width: 1024px) {
+  .rightbarWrapper {
+    padding: 20px 20px 0 20px;
+  }
+}
 .birthdayContainer {
   display: flex;
   align-items: center;

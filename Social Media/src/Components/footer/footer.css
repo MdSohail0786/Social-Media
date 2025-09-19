@@ -1,0 +1,384 @@
+.footer {
+  background-color: #1877f2;
+  color: white;
+  margin-top: auto;
+  border-top: 1px solid #e1e8ed;
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 20px;
+}
+
+.footerTop {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footerSection h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footerSection h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footerSection p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerSection ul li {
+  margin-bottom: 8px;
+}
+
+.footerSection ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footerSection ul li a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 44px; /* Touch-friendly minimum size */
+  min-width: 44px;
+}
+
+.socialIcon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.socialIcon:active {
+  transform: scale(0.95);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.contactIcon {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.footerBottomLeft p {
+  margin: 0;
+}
+
+.languageSelect {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.languageSelect option {
+  background-color: #1877f2;
+  color: white;
+}
+
+/* Extra small mobile devices */
+@media (max-width: 320px) {
+  .footerContainer {
+    padding: 20px 10px 15px;
+  }
+
+  .footerTop {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .footerSection {
+    text-align: center;
+  }
+
+  .footerSection h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .footerSection h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .footerSection p {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .footerSection ul li a {
+    font-size: 12px;
+  }
+
+  .socialIcons {
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  .socialIcon {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .contactItem {
+    font-size: 11px;
+    justify-content: center;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    font-size: 10px;
+    padding-top: 15px;
+  }
+
+  .footerBottomLeft,
+  .footerBottomRight {
+    width: 100%;
+  }
+
+  .languageSelect {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}
+
+/* Small mobile devices */
+@media (min-width: 321px) and (max-width: 480px) {
+  .footerContainer {
+    padding: 30px 15px 20px;
+  }
+
+  .footerTop {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footerSection h3 {
+    font-size: 20px;
+  }
+
+  .footerSection h4 {
+    font-size: 16px;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footerBottomLeft,
+  .footerBottomRight {
+    width: 100%;
+  }
+}
+
+/* Large mobile devices */
+@media (min-width: 481px) and (max-width: 767px) {
+  .footerContainer {
+    padding: 35px 20px 20px;
+  }
+
+  .footerTop {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footerSection h3 {
+    font-size: 22px;
+  }
+
+  .footerSection h4 {
+    font-size: 17px;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footerBottomLeft,
+  .footerBottomRight {
+    width: 100%;
+  }
+}
+
+/* Tablet responsive */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footerTop {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+
+  .footerContainer {
+    padding: 40px 25px 25px;
+  }
+
+  .footerSection h3 {
+    font-size: 24px;
+  }
+
+  .footerSection h4 {
+    font-size: 18px;
+  }
+
+  .socialIcons {
+    justify-content: flex-start;
+  }
+
+  .footerBottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Desktop responsive */
+@media (min-width: 1024px) {
+  .footerTop {
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footerContainer {
+    padding: 50px 30px 30px;
+  }
+
+  .footerSection h3 {
+    font-size: 26px;
+  }
+
+  .footerSection h4 {
+    font-size: 19px;
+  }
+
+  .socialIcons {
+    justify-content: flex-start;
+  }
+
+  .footerBottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Large desktop screens */
+@media (min-width: 1200px) {
+  .footerTop {
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 50px;
+  }
+
+  .footerContainer {
+    padding: 60px 40px 30px;
+    max-width: 1400px;
+  }
+
+  .footerSection h3 {
+    font-size: 28px;
+  }
+
+  .footerSection h4 {
+    font-size: 20px;
+  }
+}
+
+/* Extra large desktop screens */
+@media (min-width: 1600px) {
+  .footerContainer {
+    max-width: 1600px;
+    padding: 70px 50px 30px;
+  }
+
+  .footerTop {
+    gap: 60px;
+  }
+
+  .footerSection h3 {
+    font-size: 30px;
+  }
+
+  .footerSection h4 {
+    font-size: 22px;
+  }
+}

@@ -5,6 +5,22 @@
   position: sticky;
   top: 50px;
 }
+
+/* Mobile - hide sidebar by default */
+@media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/* Tablet and up - show sidebar */
+@media (min-width: 768px) {
+  .sidebar {
+    display: block;
+    max-width: 300px;
+    min-width: 250px;
+  }
+}
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -26,6 +42,23 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sidebarlistItem:hover {
+  background-color: #f0f2f5;
+}
+
+.sidebarlistItem.active {
+  background-color: #e7f3ff;
+  color: #1877f2;
+}
+
+.sidebarlistItem.active .sidebarIcon {
+  color: #1877f2;
 }
 .sidebarIcon {
   margin-right: 15px;

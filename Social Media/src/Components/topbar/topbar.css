@@ -7,6 +7,36 @@
   position: sticky;
   top: 0;
   z-index: 999;
+  padding: 0 10px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 767px) {
+  .topbarcontainer {
+    padding: 0 5px;
+  }
+
+  .logo {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  .searchInput {
+    width: 60%;
+  }
+
+  .topbarRight {
+    flex: 2;
+    justify-content: flex-end;
+  }
+
+  .topbarLink {
+    display: none;
+  }
+
+  .topbarIconItem {
+    margin-right: 10px;
+  }
 }
 
 .topbarLeft {
@@ -85,4 +115,274 @@
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
+}
+
+/* Hamburger Menu Button */
+.hamburgerMenu {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  margin-left: 15px;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.hamburgerMenu:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Menu Styles */
+.mobileMenuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.mobileMenu {
+  background-color: white;
+  width: 280px;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideInFromLeft 0.3s ease-out;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.mobileMenuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #1877f2;
+  color: white;
+  border-bottom: 1px solid #e1e8ed;
+}
+
+.mobileMenuHeader .logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 0;
+}
+
+.closeIcon {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.closeIcon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobileMenuContent {
+  padding: 20px 0;
+}
+
+.mobileMenuItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.mobileMenuItem:hover {
+  background-color: #f8f9fa;
+}
+
+.mobileMenuItem span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1c1e21;
+}
+
+.mobileShowMoreBtn {
+  margin: 20px;
+  width: calc(100% - 40px);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1877f2;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mobileShowMoreBtn:hover {
+  background-color: #166fe5;
+}
+
+/* Mobile Menu Navigation */
+.mobileMenuNav {
+  display: flex;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e1e8ed;
+}
+
+.mobileMenuNavItem {
+  flex: 1;
+  padding: 12px 16px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #65676b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.mobileMenuNavItem.active {
+  color: #1877f2;
+  border-bottom-color: #1877f2;
+  background-color: white;
+}
+
+.mobileMenuNavItem:hover {
+  background-color: #f0f2f5;
+}
+
+/* Mobile Chat Styles */
+.mobileChatHeader {
+  padding: 16px 20px 8px;
+  border-bottom: 1px solid #f0f2f5;
+  margin-bottom: 0;
+}
+
+.mobileChatHeader h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1c1e21;
+}
+
+.mobileChatList {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.mobileChatItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.mobileChatItem:hover {
+  background-color: #f8f9fa;
+}
+
+.mobileChatUser {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.mobileChatAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.mobileChatInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileChatName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1c1e21;
+  margin-bottom: 2px;
+}
+
+.mobileChatStatus {
+  font-size: 12px;
+  color: #65676b;
+}
+
+.mobileChatOnline {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #31a24c;
+  border: 2px solid white;
+}
+
+/* Mobile Profile Styles */
+.mobileProfileHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #f0f2f5;
+  background-color: #f8f9fa;
+}
+
+.mobileProfileAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 3px solid #1877f2;
+}
+
+.mobileProfileHeader h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1c1e21;
+}
+
+.mobileProfileMenu {
+  padding: 8px 0;
+}
+
+/* Show hamburger menu on mobile */
+@media (max-width: 767px) {
+  .hamburgerMenu {
+    display: block;
+  }
+
+  .topbarLinks {
+    display: none;
+  }
+
+  .topbarIcons {
+    display: none;
+  }
+
+  .topbarRight {
+    justify-content: flex-end;
+  }
+
+  .topbarImg {
+    margin-right: 15px;
+  }
 }

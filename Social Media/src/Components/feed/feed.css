@@ -1,6 +1,53 @@
 .feed {
   flex: 5.5;
 }
+
 .feedWrapper {
   padding: 20px;
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+  .feedWrapper {
+    padding: 10px;
+  }
+}
+
+/* Tablet responsive */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .feedWrapper {
+    padding: 15px;
+  }
+}
+
+/* Mobile - full width feed */
+@media (max-width: 767px) {
+  .feed {
+    flex: 1;
+    width: 100%;
+  }
+
+  .feedWrapper {
+    padding: 10px;
+  }
+}
+
+/* Tablet - optimized feed width */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .feed {
+    flex: 6;
+  }
+
+  .feedWrapper {
+    padding: 15px;
+  }
+}
+
+/* Desktop - full feed layout */
+@media (min-width: 1024px) {
+  .feedWrapper {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
 }

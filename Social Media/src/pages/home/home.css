@@ -1,4 +1,81 @@
+/* Main wrapper to contain everything */
+.homeWrapper {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .homeContainer {
   display: flex;
   width: 100%;
+  min-height: calc(100vh - 50px);
+  flex-direction: column;
+}
+
+/* Tablet and up - show sidebar and rightbar */
+@media (min-width: 768px) {
+  .homeContainer {
+    flex-direction: row;
+  }
+}
+
+/* Desktop and up - optimized layout */
+@media (min-width: 1024px) {
+  .homeContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+/* Mobile menu adjustments */
+@media (max-width: 767px) {
+  .homeContainer {
+    /* Add padding to account for mobile menu overlay */
+    padding-top: 0;
+    padding: 0 10px;
+  }
+
+  /* Ensure content doesn't scroll when mobile menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .homeContainer {
+    padding: 0 5px;
+  }
+}
+
+/* Large mobile devices */
+@media (min-width: 481px) and (max-width: 767px) {
+  .homeContainer {
+    padding: 0 15px;
+  }
+}
+
+/* Tablet responsive layout */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .homeContainer {
+    padding: 0 20px;
+  }
+}
+
+/* Desktop responsive layout */
+@media (min-width: 1024px) {
+  .homeContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+/* Large desktop screens */
+@media (min-width: 1200px) {
+  .homeContainer {
+    max-width: 1600px;
+  }
 }
